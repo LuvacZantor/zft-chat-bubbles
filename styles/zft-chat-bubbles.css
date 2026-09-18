@@ -1,0 +1,133 @@
+#zft-chat-bubbles {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.zft-chat-bubble {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 12px));
+  max-width: min(360px, 45vw);
+  color: var(--zft-text-color, #111111);
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1rem;
+  line-height: 1.35;
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 45%));
+  pointer-events: none;
+}
+
+.zft-chat-bubble__content {
+  position: relative;
+  padding: 8px 12px;
+  background: var(--zft-background-color, #f5f1e6);
+  border: 2px solid var(--zft-border-color, #2d2d2d);
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.zft-chat-bubble__tail {
+  width: 14px;
+  height: 14px;
+  margin: -8px auto 0;
+  background: var(--zft-background-color, #f5f1e6);
+  border-right: 2px solid var(--zft-border-color, #2d2d2d);
+  border-bottom: 2px solid var(--zft-border-color, #2d2d2d);
+  transform: rotate(45deg);
+}
+
+
+/* v1.2.1 settings color controls */
+form.application.standard-form .form-group input.zft-color-hex {
+  flex: 1 1 auto;
+}
+
+form.application.standard-form .form-group input.zft-color-picker,
+input.zft-color-picker {
+  flex: 0 0 42px;
+  width: 42px;
+  min-width: 42px;
+  height: 30px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+
+/* v1.3.3 Polyglot presentation */
+.zft-chat-bubble__polyglot-original {
+  display: block;
+}
+
+.zft-chat-bubble__polyglot-translation {
+  display: block;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid color-mix(in srgb, var(--zft-border-color, #2d2d2d) 45%, transparent);
+  font: inherit;
+}
+
+
+/* v1.3.4 speaker-owned User palette controls */
+.zft-personal-colors {
+  gap: 6px;
+}
+
+.zft-personal-color-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(90px, 120px) 42px;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.zft-personal-color-row .zft-color-picker {
+  width: 42px;
+  min-width: 42px;
+  height: 30px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.zft-save-personal-colors {
+  margin-top: 6px;
+}
+
+
+/* v1.3.6 dedicated configuration popup */
+.zft-bubble-config {
+  min-width: 390px;
+}
+
+.zft-bubble-config .zft-config-section {
+  margin: 0 0 12px;
+  padding: 10px;
+}
+
+.zft-bubble-config .zft-config-section legend {
+  font-weight: 700;
+}
+
+.zft-bubble-config .zft-config-color-row .form-fields {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 42px;
+  gap: 8px;
+  align-items: center;
+}
+
+.zft-bubble-config input.zft-color-picker {
+  width: 42px;
+  min-width: 42px;
+  height: 30px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+/* v1.3.9 | Token Controls shortcut accent.
+ * Foundry retains ownership of control sizing/layout; only the FA glyph is colored.
+ */
+.zft-chat-bubbles-toolbar-icon {
+  color: #f2c94c;
+}
+

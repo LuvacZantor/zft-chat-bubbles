@@ -1,0 +1,32 @@
+{
+  "id": "zft-chat-bubbles",
+  "title": "ZFT Chat Bubbles",
+  "description": "ZFT-owned chat bubble renderer with configurable reading-time duration.",
+  "version": "1.3.9",
+  "authors": [
+    {
+      "name": "ZFT"
+    },
+    {
+      "name": "Original Longer Chat Bubbles concept by jsavko",
+      "url": "https://github.com/jsavko/longer-chat-bubbles"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/zft-chat-bubbles.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ]
+}

@@ -1,22 +1,43 @@
-# ZFT Chat Bubbles v1.3.9
+# ZFT Chat Bubbles v1.4.0
 
-Based directly on stable V13 baseline v1.3.6.
+ZFT Chat Bubbles is a Foundry VTT V13 module providing independently styled chat bubbles, user-customizable colors, configurable timing, and Polyglot-language support.
 
-Change:
-- Restores Foundry-native Font Awesome `fa-comment-dots` for the Token Controls shortcut.
-- Adds a dedicated ZFT icon class and gold/yellow glyph color.
-- No PNG rendering and no toolbar sizing/layout CSS.
-- No changes to bubble rendering, Polyglot integration, Common handling, colors, timing, or configuration popup.
+## Version and compatibility
 
-Validation:
-1. Install/update v1.3.9 and F5 the client.
-2. Open Token Controls.
-3. Expected: the ZFT configuration shortcut shows a gold/yellow chat-bubble-with-dots Font Awesome icon.
-4. Click the icon.
-5. Expected: the existing ZFT configuration popup opens normally.
-6. Send normal IC, Common, and Polyglot-language messages and verify bubble behavior is unchanged.
+- Version: 1.4.0
+- Foundry VTT: V13 Build 351 (V14 not validated)
+- Requires: ZFT Tools shared canvas toolbar (tested with ZFT Tools 0.1.0-dev.7)
 
-Expected console:
-[ZFT] 🫧 v1.3.9 | ZFT Chat Bubbles module script loaded
-[ZFT] ✅ v1.3.9 | Token Controls configuration shortcut registered
-[ZFT] 🛠️ v1.3.9 | Token Controls configuration shortcut activated
+## Features
+
+- Independently rendered token chat bubbles for IC/emote messages.
+- User-configurable text, background, and border colors.
+- GM-configurable reading speed and minimum/maximum duration.
+- Compatible presentation for Polyglot-language messages.
+- A **Chat Bubbles** configuration action under **ZFT Tools** for both GMs and players.
+- GM-only timing settings remain accessible only to GMs; players can configure their own colors and diagnostics.
+
+## v1.4.0
+
+- Moved the Chat Bubbles configuration shortcut from Foundry's Token Controls group into the shared ZFT Tools toolbar.
+- Made the configuration shortcut visible to GMs and players (`gmOnly: false`).
+- Integrated with the stable ZFT Tools button order (after Cinematics Settings, before Raised Hands).
+- Added `zft-tools` as a required module dependency.
+- Preserved bubble rendering, settings persistence, Polyglot presentation, and existing personal-color UI unchanged from v1.3.9.
+
+## Local validation
+
+1. Enable ZFT Tools, then ZFT Chat Bubbles and refresh the browser (Ctrl+Shift+R).
+2. As GM, open ZFT Tools > Chat Bubbles; confirm the personal-color editor and GM timing settings appear.
+3. As a non-GM player, open ZFT Tools > Chat Bubbles; confirm personal colors can be saved and that GM timing fields are absent.
+4. Confirm the shortcut no longer appears under Token Controls.
+5. Test IC/emote messages and Polyglot-language messages. Confirm bubbles render as before.
+6. Switch between ZFT Tools and Token Controls directly; confirm no console errors.
+
+## Installation / source
+
+The release candidate ZIP prepared for the GitHub update contains only the three **changed files**, and is not a standalone installable module. The full release archive must additionally contain all unchanged v1.3.9 repository files. Do not install the candidate ZIP into an empty module folder.
+
+## License
+
+See LICENSE in the repository.
